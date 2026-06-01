@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'fa' ? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,11 +11,24 @@
     <link rel="stylesheet" href="{{ asset('site/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{asset('site/assets/css/all.min.css')}}"/>
 </head>
-<body>
+<body class="{{ session('theme', config('theme.default')) }}">
 <div class="bg-effect"></div>
 <!-- Header -->
 <header class="navbar">
+    <a href="{{ route('theme.switch','light') }}">
+        Light
+    </a>
 
+    <a href="{{ route('theme.switch','dark') }}">
+        Dark
+    </a>
+    <a href="{{ route('language.switch','fa') }}">
+        فارسی
+    </a>
+
+    <a href="{{ route('language.switch','en') }}">
+        English
+    </a>
     <div class="nav-menu">
 
         <div class="mobile-toggle">

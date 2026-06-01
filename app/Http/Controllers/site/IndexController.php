@@ -15,23 +15,22 @@ class IndexController extends Controller
     {
         $projects = Project::query()
             ->where('invest_step', '>=', 10)
+            ->where('invest_step', '<', 20)
             ->latest()
-            ->limit(4)
             ->get();
 
         $posts = Post::query()
             ->where('status', 4)
             ->latest()
-            ->limit(4)
             ->get();
 
         $companies = Company::query()
             ->where('status', 4)
             ->latest()
-            ->limit(4)
             ->get();
 
-        return view('site.index', compact('projects', 'posts', 'companies'));
+//        return view('site.index', compact('projects', 'posts', 'companies'));
+        return view('site.'.app()->getLocale().'.index', compact('projects', 'posts', 'companies'));
     }
 
     public function contact()

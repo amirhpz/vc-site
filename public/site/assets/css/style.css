@@ -566,8 +566,44 @@ section {
 
 /* Portfolio / News / Partners */
 .portfolioSwiper,
-.newsSwiper {
-    overflow: visible !important;
+.newsSwiper{
+    overflow:hidden !important;
+    padding:10px 0 20px;
+}
+
+.newsSwiper .swiper-slide{
+    width:420px !important;
+    height:auto;
+}
+
+.newsSwiper .news-card{
+    height:100%;
+}
+
+.newsSwiper .news-image{
+    height:260px;
+}
+
+.newsSwiper .news-content{
+    min-height:220px;
+}
+
+.newsSwiper .news-content p{
+    margin-top:15px;
+    line-height:2;
+    color:#64748b;
+}
+
+@media(max-width:768px){
+
+    .newsSwiper .swiper-slide{
+        width:300px !important;
+    }
+
+    .newsSwiper .news-image{
+        height:220px;
+    }
+
 }
 
 .portfolio-card,
@@ -2200,4 +2236,501 @@ section {
     .portfolio-page-content h3 {
         font-size: 18px;
     }
+}
+/* ==========================================================
+   PROFESSIONAL EXTENSIONS
+   Add To End Of style.css
+========================================================== */
+
+:root{
+    --primary:#14d8c4;
+    --primary-dark:#0ea896;
+
+    --bg:#f4f8fb;
+    --surface:#ffffff;
+
+    --text:#07111f;
+    --text-light:#475569;
+    --text-muted:#64748b;
+
+    --border:rgba(20,216,196,.12);
+
+    --shadow-sm:0 12px 30px rgba(15,23,42,.04);
+    --shadow-md:0 18px 45px rgba(15,23,42,.05);
+    --shadow-lg:0 25px 70px rgba(15,23,42,.06);
+}
+
+/* ---------- Performance ---------- */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.card-cover-image,
+.news-page-image img,
+.single-news-cover img,
+.single-news-gallery-item img,
+.heroSwiper{
+    transform:translateZ(0);
+    backface-visibility:hidden;
+}
+
+.sector-card,
+.stat-box,
+.portfolio-card,
+.news-card,
+.partner-card,
+.news-page-card{
+    will-change:transform;
+}
+
+/* ---------- Focus ---------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+    outline:3px solid rgba(20,216,196,.35);
+    outline-offset:3px;
+}
+
+/* ---------- Better Forms ---------- */
+
+input,
+textarea{
+    transition:
+        border-color .3s,
+        box-shadow .3s,
+        background-color .3s;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* ---------- Better Hover ---------- */
+
+.partner-card:hover,
+.portfolio-card:hover,
+.news-card:hover,
+.news-page-card:hover{
+    box-shadow:
+        0 30px 70px rgba(20,216,196,.12);
+}
+
+/* ---------- Mobile Navbar ---------- */
+
+@media (max-width:768px){
+
+    .nav-menu{
+        overflow:visible;
+    }
+
+    .nav-links{
+        z-index:9999;
+    }
+
+    .nav-right,
+    .nav-left{
+        gap:14px;
+    }
+
+    .nav-links a{
+        padding:10px 0;
+    }
+
+    .logo img{
+        width:150px;
+    }
+
+}
+
+/* ---------- Better Mobile Cards ---------- */
+
+@media (max-width:768px){
+
+    .sector-card,
+    .stat-box{
+        min-height:220px;
+        height:auto;
+        padding:30px;
+    }
+
+    .partner-card{
+        min-height:200px;
+    }
+
+    .news-page-content p{
+        min-height:auto;
+    }
+
+    .single-news-gallery-item{
+        height:240px;
+    }
+
+}
+
+/* ---------- Small Devices ---------- */
+
+@media (max-width:480px){
+
+    .hero-content{
+        padding:0 20px;
+    }
+
+    .hero-content h1{
+        line-height:1.6;
+    }
+
+    .section-header{
+        margin-bottom:45px;
+    }
+
+    .single-news-body{
+        padding:22px;
+    }
+
+    .single-sidebar-card{
+        padding:22px;
+    }
+
+    .footer{
+        margin-top:80px;
+    }
+
+}
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark{
+
+    --bg:#07111f;
+    --surface:#0f172a;
+
+    --text:#f8fafc;
+    --text-light:#cbd5e1;
+    --text-muted:#94a3b8;
+
+    background:#07111f;
+    color:#f8fafc;
+}
+
+body.dark .bg-effect{
+    background:
+        radial-gradient(circle at top right,rgba(20,216,196,.15),transparent 25%),
+        radial-gradient(circle at bottom left,rgba(20,216,196,.08),transparent 30%),
+        linear-gradient(to bottom,#07111f,#0f172a);
+}
+
+body.dark .nav-menu,
+body.dark .footer,
+body.dark .sector-card,
+body.dark .stat-box,
+body.dark .portfolio-card,
+body.dark .news-card,
+body.dark .partner-card,
+body.dark .about-card,
+body.dark .contact-page-form,
+body.dark .news-page-card,
+body.dark .single-news-card,
+body.dark .single-sidebar-card,
+body.dark .single-news-gallery-box{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,.96),
+            rgba(15,23,42,.88)
+        );
+
+    border-color:
+        rgba(20,216,196,.18);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6{
+    color:#f8fafc !important;
+}
+
+body.dark p,
+body.dark li,
+body.dark span:not(.counter){
+    color:#94a3b8;
+}
+
+body.dark .nav-right a,
+body.dark .nav-left a{
+    color:#f8fafc;
+}
+
+body.dark .secondary-btn{
+    background:#0f172a;
+    color:#f8fafc;
+    border-color:#1e293b;
+}
+
+body.dark input,
+body.dark textarea{
+    background:#0f172a;
+    color:#f8fafc;
+    border-color:#1e293b;
+}
+
+body.dark .single-news-file,
+body.dark .single-sidebar-info div,
+body.dark .related-news-item{
+    background:#111c31;
+    border-color:#1e293b;
+}
+
+/* ==========================================================
+   LTR SUPPORT
+========================================================== */
+
+html[dir="ltr"] body{
+    direction:ltr;
+}
+
+html[dir="ltr"] .nav-right a::after,
+html[dir="ltr"] .nav-left a::after,
+html[dir="ltr"] .footer-column h3::after,
+html[dir="ltr"] .single-sidebar-card h3::after{
+    left:0;
+    right:auto;
+}
+
+html[dir="ltr"] .single-news-description ul,
+html[dir="ltr"] .single-news-description ol{
+    padding-left:24px;
+    padding-right:0;
+}
+
+html[dir="ltr"] .contact-info-card{
+    text-align:left;
+}
+
+html[dir="ltr"] .single-news-meta,
+html[dir="ltr"] .news-page-meta{
+    justify-content:flex-start;
+}
+
+/* ==========================================================
+   Accessibility
+========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+    }
+
+}
+/* DARK MODE */
+
+body.dark{
+
+    --bg:#07111f;
+
+    --white:#0f172a;
+
+    --text:#f8fafc;
+    --text-light:#cbd5e1;
+    --text-muted:#94a3b8;
+
+    background:#07111f;
+    color:#f8fafc;
+}
+
+body.dark .bg-effect{
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(20,216,196,.15),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(20,216,196,.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            to bottom,
+            #07111f,
+            #0f172a
+        );
+}
+
+body.dark .nav-menu,
+body.dark .footer,
+body.dark .sector-card,
+body.dark .stat-box,
+body.dark .portfolio-card,
+body.dark .news-card,
+body.dark .partner-card,
+body.dark .about-card,
+body.dark .contact-page-form,
+body.dark .news-page-card,
+body.dark .single-news-card,
+body.dark .single-sidebar-card,
+body.dark .single-news-gallery-box{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,.96),
+            rgba(15,23,42,.88)
+        );
+
+    border-color:
+        rgba(20,216,196,.18);
+}
+
+body.dark .section-header h2,
+body.dark .hero-content h1,
+body.dark .portfolio-content h3,
+body.dark .news-content h3,
+body.dark .partner-card h3,
+body.dark .footer-column h3,
+body.dark .single-news-body h2,
+body.dark .news-page-content h3{
+    color:#f8fafc;
+}
+
+body.dark .hero-content p,
+body.dark .portfolio-content p,
+body.dark .news-content p,
+body.dark .footer-column p,
+body.dark .single-news-description,
+body.dark .single-news-summary,
+body.dark .contact-info-card p{
+    color:#94a3b8;
+}
+
+body.dark .nav-right a,
+body.dark .nav-left a{
+    color:#f8fafc;
+}
+
+body.dark .secondary-btn{
+    background:#0f172a;
+    color:#f8fafc;
+    border-color:#1e293b;
+}
+
+body.dark input,
+body.dark textarea{
+    background:#0f172a;
+    color:#f8fafc;
+    border-color:#1e293b;
+}
+.portfolio-slider{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-behavior:smooth;
+    padding-bottom:15px;
+    cursor:grab;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+}
+.portfolio-slider:active{
+    cursor:grabbing;
+}
+.portfolio-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.portfolio-slider::-webkit-scrollbar-thumb{
+    background:#14d8c4;
+    border-radius:20px;
+}
+
+.portfolio-slide{
+    flex:0 0 360px;
+}
+
+.portfolio-slide .portfolio-card{
+    height:100%;
+}
+
+@media(max-width:768px){
+
+    .portfolio-slider{
+        gap:20px;
+    }
+
+    .portfolio-slide{
+        flex:0 0 290px;
+    }
+
+}
+.partnersSwiper{
+    overflow:hidden !important;
+    padding:10px 0 20px;
+}
+
+.partnersSwiper .swiper-slide{
+    width:280px !important;
+    height:auto;
+}
+
+.partnersSwiper .partner-card{
+    height:230px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.partnersSwiper .partner-logo{
+    width:110px;
+    height:110px;
+    margin-bottom:20px;
+}
+
+.partnersSwiper .partner-card h3{
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.partnersSwiper .brand-image-box{
+    width:100%;
+    height:100%;
+}
+
+.partnersSwiper .brand-image-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+@media(max-width:768px){
+
+    .partnersSwiper .swiper-slide{
+        width:220px !important;
+    }
+
+    .partnersSwiper .partner-card{
+        height:200px;
+    }
+
+    .partnersSwiper .partner-logo{
+        width:90px;
+        height:90px;
+    }
+
 }

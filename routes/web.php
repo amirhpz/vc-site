@@ -3,11 +3,6 @@
 use App\Http\Controllers\site\IndexController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('site.index');
-});
-
-
 Route::get('/', [IndexController::class, 'index'])->name('/');
 Route::get('/about', [IndexController::class, 'about'])->name('about');
 Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
@@ -15,3 +10,35 @@ Route::get('/events', [IndexController::class, 'events'])->name('events');
 Route::get('/news', [IndexController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [IndexController::class, 'newsShow'])->name('news.show');
 Route::get('/portfolio', [IndexController::class, 'portfolio'])->name('portfolio');
+
+Route::get('/theme/{theme}', function ($theme) {
+
+    abort_unless(
+        in_array($theme,['light','dark']),
+        404
+    );
+
+    session([
+        'theme' => $theme
+    ]);
+
+    return back();
+
+})->name('theme.switch');
+
+Route::get('/lang/{locale}', function ($locale) {
+
+    abort_unless(
+        in_array($locale,['fa','en']),
+        404
+    );
+
+    session([
+        'locale' => $locale
+    ]);
+
+    app()->setLocale($locale);
+
+    return back();
+
+})->name('language.switch');
