@@ -817,17 +817,15 @@ body.dark .theme-tool-btn.active {
 
 .news-image {
     height: 260px;
-    background:
-        linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3)),
-        url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070");
+    background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3)),
+    url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070");
     background-size: cover;
     background-position: center;
 }
 
 .news2 {
-    background:
-        linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3)),
-        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072");
+    background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072");
     background-size: cover;
     background-position: center;
 }
@@ -2209,7 +2207,7 @@ body.dark .theme-tool-btn.active {
     }
 
     .hero {
-        padding-top: 130px;
+        padding-top: 150px;
     }
 
     .heroSwiper {
@@ -2577,28 +2575,177 @@ textarea::placeholder {
 /* ---------- Mobile Navbar ---------- */
 
 @media (max-width: 768px) {
-
-    .nav-menu {
-        overflow: visible;
+    .navbar {
+        top: 16px;
     }
 
-    .nav-links {
-        z-index: 9999;
+    .site-tools {
+        width: 92%;
+        margin: 0 auto 8px;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .site-tool-group {
+        height: 34px;
+        padding: 4px;
+    }
+
+    .site-tool-btn {
+        min-width: 42px;
+        height: 26px;
+        padding: 0 7px;
+    }
+
+    .theme-tool {
+        width: 70px;
+    }
+
+    .theme-tool::before {
+        width: 26px;
+        height: 26px;
+    }
+
+    body.light .theme-tool::before {
+        right: 4px;
+    }
+
+    body.dark .theme-tool::before {
+        right: 40px;
+    }
+
+    .theme-tool-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .tool-flag {
+        font-size: 14px;
+    }
+
+    .tool-label {
+        font-size: 10px;
+    }
+
+    .nav-menu {
+        width: 92%;
+        height: 76px;
+        padding: 0 22px;
+        border-radius: 26px;
+        justify-content: center;
+    }
+
+    .mobile-toggle {
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        background: rgba(20, 216, 196, .12);
+        border: 1px solid rgba(20, 216, 196, .18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #07111f;
+        z-index: 20;
+        transition: .3s;
+    }
+
+    .mobile-toggle.active {
+        background: #14d8c4;
+        color: #07111f;
+    }
+
+    .logo {
+        padding: 0 !important;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    .nav-menu .logo::before,
+    .nav-menu .logo::after {
+        display: none;
     }
 
     .nav-right,
     .nav-left {
-        gap: 14px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        padding: 22px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, .96);
+        border: 1px solid rgba(20, 216, 196, .12);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, .08);
+        backdrop-filter: blur(20px);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        z-index: 19;
     }
 
-    .nav-links a {
-        padding: 10px 0;
+    .nav-right {
+        top: 88px;
     }
 
-    .logo img {
-        width: 150px;
+    .nav-left {
+        top: 290px;
     }
 
+    .nav-right.active,
+    .nav-left.active {
+        display: flex;
+    }
+
+    .nav-right a,
+    .nav-left a {
+        width: 100%;
+        padding: 13px 0;
+        text-align: center;
+        color: #07111f;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(15, 23, 42, .06);
+    }
+
+    .nav-right a:last-child,
+    .nav-left a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-right a::after,
+    .nav-left a::after {
+        display: none;
+    }
+
+    body.dark .mobile-toggle {
+        background: rgba(20, 216, 196, .14);
+        color: #f8fafc;
+        border-color: rgba(20, 216, 196, .22);
+    }
+
+    body.dark .mobile-toggle.active {
+        background: #14d8c4;
+        color: #07111f;
+    }
+
+    body.dark .nav-right,
+    body.dark .nav-left {
+        background: rgba(15, 23, 42, .96);
+        border-color: rgba(20, 216, 196, .18);
+        box-shadow: 0 22px 50px rgba(0, 0, 0, .32);
+    }
+
+    body.dark .nav-right a,
+    body.dark .nav-left a {
+        color: #f8fafc;
+        border-bottom-color: rgba(255, 255, 255, .06);
+    }
 }
 
 /* ---------- Better Mobile Cards ---------- */

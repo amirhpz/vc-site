@@ -73,13 +73,15 @@
         </div>
 
         <div class="logo">
-            <img src="{{ asset('site/assets/images/logo.png') }}" alt="">
+            <a href="{{ route('/') }}">
+                <img src="{{ asset('site/assets/images/logo.png') }}" alt="توسعه دانش بنیان سینا">
+            </a>
         </div>
 
         <div class="nav-left nav-links">
-            <a href="{{ route('portfolio')}}">پورتفو</a>
-            <a href="{{ route('news')}}">اخبار</a>
-            <a href="{{ route('contact')}}">تماس با ما</a>
+            <a href="{{ route('portfolio') }}">پورتفو</a>
+            <a href="{{ route('news') }}">اخبار</a>
+            <a href="{{ route('contact') }}">تماس با ما</a>
         </div>
 
     </div>
