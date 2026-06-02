@@ -290,7 +290,7 @@
 
                                 <div class="news-content">
                                 <span>
-                                    {{ optional($post->created_at)->format('Y-m-d') }}
+                                    {{ $post->created_at ? \Morilog\Jalali\Jalalian::fromCarbon($post->created_at)->format('Y/m/d') : '' }}
                                 </span>
 
                                     <h3>{{ $post->title }}</h3>

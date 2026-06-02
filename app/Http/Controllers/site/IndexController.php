@@ -7,10 +7,8 @@ use App\Models\site\Company;
 use App\Models\site\Post;
 use App\Models\site\Project;
 
-
 class IndexController extends Controller
 {
-
     public function index()
     {
         $projects = Project::query()
@@ -29,23 +27,22 @@ class IndexController extends Controller
             ->latest()
             ->get();
 
-//        return view('site.index', compact('projects', 'posts', 'companies'));
-        return view('site.'.app()->getLocale().'.index', compact('projects', 'posts', 'companies'));
+        return view($this->localizedView('index'), compact('projects', 'posts', 'companies'));
     }
 
     public function contact()
     {
-        return view('site.contact');
+        return view($this->localizedView('contact'));
     }
 
     public function about()
     {
-        return view('site.about');
+        return view($this->localizedView('about'));
     }
 
     public function events()
     {
-        return view('site.events');
+        return view($this->localizedView('events'));
     }
 
     public function news()
@@ -56,7 +53,7 @@ class IndexController extends Controller
             ->orderByDesc('created_at')
             ->paginate(6);
 
-        return view('site.news', compact('posts'));
+        return view($this->localizedView('news'), compact('posts'));
     }
 
     public function newsShow($slug)
@@ -74,7 +71,7 @@ class IndexController extends Controller
             ->limit(3)
             ->get();
 
-        return view('site.single-new', compact('post', 'relatedPosts'));
+        return view($this->localizedView('single-new'), compact('post', 'relatedPosts'));
     }
 
     public function portfolio()
@@ -84,6 +81,11 @@ class IndexController extends Controller
             ->orderByDesc('id')
             ->paginate(12);
 
-        return view('site.portfolio', compact('projects'));
+        return view($this->localizedView('portfolio'), compact('projects'));
+    }
+
+    private function localizedView(string $view): string
+    {
+        return 'site.' . app()->getLocale() . '.' . $view;
     }
 }

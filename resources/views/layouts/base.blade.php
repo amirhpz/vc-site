@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'fa' ? 'rtl' : 'ltr' }}">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>@yield('title', 'توسعه دانش بنیان سینا')</title>
     @yield('meta')
@@ -15,20 +15,51 @@
 <div class="bg-effect"></div>
 <!-- Header -->
 <header class="navbar">
-    <a href="{{ route('theme.switch','light') }}">
-        Light
-    </a>
 
-    <a href="{{ route('theme.switch','dark') }}">
-        Dark
-    </a>
-    <a href="{{ route('language.switch','fa') }}">
-        فارسی
-    </a>
+    <div class="site-tools">
+        <div class="site-tool-group language-tool">
+            <a
+                href="{{ route('language.switch', 'fa') }}"
+                class="site-tool-btn {{ app()->getLocale() === 'fa' ? 'active' : '' }}"
+                title="فارسی"
+                aria-label="فارسی"
+            >
+                <span class="tool-flag">🇮🇷</span>
+                <span class="tool-label">FA</span>
+            </a>
 
-    <a href="{{ route('language.switch','en') }}">
-        English
-    </a>
+            <a
+                href="{{ route('language.switch', 'en') }}"
+                class="site-tool-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}"
+                title="English"
+                aria-label="English"
+            >
+                <span class="tool-flag">🇬🇧</span>
+                <span class="tool-label">EN</span>
+            </a>
+        </div>
+
+        <div class="site-tool-group theme-tool">
+            <a
+                href="{{ route('theme.switch', 'light') }}"
+                class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'light' ? 'active' : '' }}"
+                title="Light mode"
+                aria-label="Light mode"
+            >
+                <i class="fa-solid fa-sun"></i>
+            </a>
+
+            <a
+                href="{{ route('theme.switch', 'dark') }}"
+                class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'dark' ? 'active' : '' }}"
+                title="Dark mode"
+                aria-label="Dark mode"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </a>
+        </div>
+    </div>
+
     <div class="nav-menu">
 
         <div class="mobile-toggle">

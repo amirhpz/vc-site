@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             loop: true,
 
-            speed: 7000,
+            speed: 3000,
 
             autoplay: {
                 delay: 1,
