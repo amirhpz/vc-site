@@ -53,6 +53,9 @@
 
                         <div class="portfolio-content portfolio-page-content">
                             <h3>{{ $project->title }}</h3>
+                            <p>
+                                {{ Str::limit(strip_tags($project->description ?? ''), 120) }}
+                            </p>
                         </div>
                     </div>
                 @endforeach
