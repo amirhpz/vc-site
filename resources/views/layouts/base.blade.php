@@ -31,21 +31,11 @@
         </div>
 
         <div class="site-tool-group theme-tool">
-            <a
-                href="{{ route('theme.switch', 'light') }}"
-                class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'light' ? 'active' : '' }}"
-                title="Light mode"
-                aria-label="Light mode"
-            >
+            <a href="{{ route('theme.switch', 'light') }}" class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'light' ? 'active' : '' }}" title="Light mode" aria-label="Light mode">
                 <i class="fa-solid fa-sun"></i>
             </a>
 
-            <a
-                href="{{ route('theme.switch', 'dark') }}"
-                class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'dark' ? 'active' : '' }}"
-                title="Dark mode"
-                aria-label="Dark mode"
-            >
+            <a href="{{ route('theme.switch', 'dark') }}" class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'dark' ? 'active' : '' }}" title="Dark mode" aria-label="Dark mode">
                 <i class="fa-solid fa-moon"></i>
             </a>
         </div>
@@ -134,9 +124,7 @@
 
     </div>
 
-    <div class="copyright">
-        © 2025 Sinavc VC — All Rights Reserved
-    </div>
+    <div class="copyright">© طراحی و پشتیبانی توسط واحد فناوری اطلاعات شرکت توسعه دانش بنیان سینا </div>
 
 </footer>
 

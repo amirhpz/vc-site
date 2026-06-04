@@ -2,6 +2,51 @@
 
 @section('title', 'صندوق سرمایه‌گذاری خطرپذیر شرکتی - توسعه دانش بنیان سینا')
 
+@section('meta')
+    <meta name="description" content="{{ $seoDescription ?? 'شرکت سرمایه‌گذاری توسعه دانش بنیان سینا،شرکت سرمایه‌گذاری، خطرپذیر فعال در سرمایه‌گذاری استارتاپ‌ها، فناوری‌های نوآورانه و کسب‌وکارهای دانش ‌بنیان' }}">
+
+    <meta name="keywords" content="{{ $seoKeywords ?? 'Venture Capital, VC, Startup, Investment, Innovation, Technology, Venture Capital Firm, توسعه دانش بنیان سینا، سرمایه گذاری خطرپذیر, سرمایه گذاری استارتاپی' }}">
+
+    <meta name="author" content="{{ config('app.name') }}">
+
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <meta name="theme-color" content="#14d8c4">
+
+    <meta name="application-name" content="{{ config('app.name') }}">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+
+    <meta property="og:title" content="{{ $seoTitle ?? config('app.name') }}">
+
+    <meta property="og:description" content="{{ $seoDescription ?? '' }}">
+
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    <meta property="og:locale" content="{{ app()->getLocale() == 'fa' ? 'fa_IR' : 'en_US' }}">
+
+    <meta property="og:image" content="{{ isset($seoImage) ? asset($seoImage) : asset('site/assets/images/icon.png') }}">
+
+    <meta property="og:image:width" content="1200">
+
+    <meta property="og:image:height" content="630">
+
+    <meta property="og:image:type" content="image/jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="{{ $seoTitle ?? config('app.name') }}">
+
+    <meta name="twitter:description" content="{{ $seoDescription ?? 'شرکت سرمایه‌گذاری توسعه دانش بنیان سینا،شرکت سرمایه‌گذاری، خطرپذیر فعال در سرمایه‌گذاری استارتاپ‌ها، فناوری‌های نوآورانه و کسب‌وکارهای دانش ‌بنیان' }}">
+
+    <meta name="twitter:image" content="{{ isset($seoImage) ? asset($seoImage) : asset('site/assets/images/icon.png') }}">
+
+    <meta name="twitter:url" content="{{ url()->current() }}">
+@endsection
 @section('content')
 
     <section class="hero">
@@ -224,10 +269,7 @@
                                 <div class="portfolio-logo">
                                     @if(!empty($project->cover))
                                         <div class="brand-image-box">
-                                            <img
-                                                src="{{ asset($project->cover) }}"
-                                                alt="{{ $project->title }}"
-                                            >
+                                            <img src="{{ asset($project->cover) }}" alt="{{ $project->title }}">
                                         </div>
                                     @else
                                         <div class="brand-placeholder">
