@@ -104,19 +104,19 @@
 
             <h3>ارتباط با ما</h3>
 
-            <p>آدرس: بزرگراه رسالت غرب، ابتدای خروجی آفریقا، مجتمع مرکزی بنیاد مستضعفان، ساختمان شماره 1، طبقه پانزدهم</p>
+            <p style="text-align: justify">آدرس: بزرگراه شهید سلیمانی ، ابتدای خیابان نلسون مندلا، ساختمان مرکزی بنیاد مستضعفان، طبقه پانزدهم</p>
             <p>تلفن تماس  : 02188670701</p>
-            <p>info@sina.vc</p>
+            <p>کد پستی  : 1010101010</p>
+            <p>ایمیل : info@sina.vc</p>
 
             <div class="socials">
 
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                <a href=""><img src="{{asset('site/assets/images/certification/afta.svg')}}" alt=""></a>
+                <a href=""><img src="{{asset('site/assets/images/certification/daneshbonyan.svg')}}" alt=""></a>
+                <a href=""><img src="{{asset('site/assets/images/certification/etehadie.svg')}}" alt=""></a>
+                <a href=""><img src="{{asset('site/assets/images/certification/namad.svg')}}" alt=""></a>
+                <a href=""><img src="{{asset('site/assets/images/certification/nasr.svg')}}" alt=""></a>
+                <a href=""><img src="{{asset('site/assets/images/certification/sabt.svg')}}" alt=""></a>
 
             </div>
 
