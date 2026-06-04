@@ -50,65 +50,37 @@
 @section('content')
 
     <section class="hero">
-        <div class="swiper heroSwiper">
-            <div class="swiper-wrapper">
+        <div class="hero-layout">
+            <div class="hero-slider-wrapper">
+                <div class="swiper heroSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-slide" style="background-image:url('{{ asset('site/slider/1.png') }}');">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content">
+                                <span>VENTURE CAPITAL</span>
+                                <h1>سرمایه‌گذاری بر آینده
+                                    <br>
+                                    فناوری و نوآوری
+                                </h1>
+                                <p>حمایت از استارتاپ‌ها و طرح‌های دانش‌بنیان در مسیر رشد و تحول اکوسیستم فناوری</p>
+                            </div>
+                        </div>
 
-                <div class="swiper-slide hero-slide">
-                    <div class="hero-overlay"></div>
-
-                    <div class="hero-content">
-                        <span>VENTURE CAPITAL</span>
-
-                        <h1>
-                            سرمایه‌گذاری بر آینده
-                            <br>
-                            فناوری و نوآوری
-                        </h1>
-
-                        <p>
-                            حمایت از استارتاپ‌ها و طرح‌های دانش‌بنیان
-                            در مسیر رشد و تحول اکوسیستم فناوری
-                        </p>
-
-                        <div class="hero-buttons">
-                            <button class="primary-btn">
-                                ارسال طرح
-                            </button>
-
-                            <button class="secondary-btn">
-                                مشاهده پورتفو
-                            </button>
+                        <div class="swiper-slide hero-slide" style="background-image:url('{{ asset('site/slider/2.png') }}');">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content">
+                                <span>SMART INVESTMENT</span>
+                                <h1>ساخت آینده
+                                    <br>
+                                    با سرمایه‌گذاری هوشمند
+                                </h1>
+                                <p>همراه رشد استارتاپ‌های جوان و فناوری‌های آینده‌محور</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="swiper-slide hero-slide slide2">
-                    <div class="hero-overlay"></div>
-
-                    <div class="hero-content">
-                        <span>SMART INVESTMENT</span>
-
-                        <h1>
-                            ساخت آینده
-                            <br>
-                            با سرمایه‌گذاری هوشمند
-                        </h1>
-
-                        <p>
-                            همراه رشد استارتاپ‌های جوان و فناوری‌های آینده‌محور
-                        </p>
-
-                        <div class="hero-buttons">
-                            <button class="primary-btn">
-                                شروع همکاری
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
-            <div class="swiper-pagination"></div>
         </div>
     </section>
 
