@@ -6,6 +6,7 @@
 
     <title>@yield('title', 'توسعه دانش بنیان سینا')</title>
     @yield('meta')
+    <link rel="icon" type="image/x-icon" href="{{ asset('site/assets/images/icon.png') }}"/>
 
     <link rel="stylesheet" href="{{asset('site/assets/css/swiper-bundle.min.css')}}"/>
     <link rel="stylesheet" href="{{ asset('site/assets/css/style.css') }}">
