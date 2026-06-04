@@ -17,24 +17,14 @@
 <header class="navbar">
 
     <div class="site-tools">
+
         <div class="site-tool-group language-tool">
-            <a
-                href="{{ route('language.switch', 'fa') }}"
-                class="site-tool-btn {{ app()->getLocale() === 'fa' ? 'active' : '' }}"
-                title="فارسی"
-                aria-label="فارسی"
-            >
-                <span class="tool-flag">🇮🇷</span>
+            <a href="{{ route('language.switch', 'fa') }}" class="site-tool-btn {{ app()->getLocale() === 'fa' ? 'active' : '' }}" title="فارسی" aria-label="فارسی">
+{{--                <span class="tool-flag">🇮🇷</span>--}}
                 <span class="tool-label">FA</span>
             </a>
-
-            <a
-                href="{{ route('language.switch', 'en') }}"
-                class="site-tool-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}"
-                title="English"
-                aria-label="English"
-            >
-                <span class="tool-flag">🇬🇧</span>
+            <a href="{{ route('language.switch', 'en') }}" class="site-tool-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}" title="English" aria-label="English">
+{{--                <span class="tool-flag">🇬🇧</span>--}}
                 <span class="tool-label">EN</span>
             </a>
         </div>
@@ -99,26 +89,23 @@
 
         <div class="footer-column">
 
-            <h3>منو</h3>
+            <h3> خدمات ارزش‌آفرینی </h3>
 
-            <a href="{{ route('/') }}">خانه</a>
-            <a href="{{ route('about') }}">درباره ما</a>
-            <a href="{{ route('events') }}">رویدادها</a>
-            <a href="{{ route('portfolio') }}">پورتفو</a>
-            <a href="{{ route('news') }}">اخبار</a>
-            <a href="{{ route('contact') }}">تماس با ما</a>
-
+            <a href="{{ route('/') }}">برگزاری کارگاه و رویداد و نمایشگاه</a>
+            <a href="{{ route('events') }}">مشاوره های تخصصی، آموزش و منتورینگ</a>
+            <a href="{{ route('portfolio') }}">توسعه بازار و اتصال به صنایع</a>
+            <a href="{{ route('news') }}">تسهیلات و اعتبارات، پوشش ریسک دانش بنیان ها</a>
         </div>
 
         <div class="footer-column middle">
 
             <img src="{{asset('site/assets/images/logo.png')}}" alt="">
 
-            <p>
-                ما با تمرکز بر سرمایه‌گذاری خطرپذیر، از استارتاپ‌ها و
-                طرح‌های دانش‌بنیان حمایت می‌کنیم و مسیر رشد نوآوری را
-                هموار می‌سازیم.
+            <p style="text-align: justify">
+                شرکت توسعه دانش بنیان سینا به عنوان بازوی سرمایه گذاری خطر پذیر بنیاد مستضعفان انقلاب اسلامی در قالب هلدینگ تحقیق و توسعه دانشمند به ارائه خدمات در حوزه رفع نیازها و چالشهای فناورانه شرکتهای تابعه بنیاد مستضعفان، رفع مسائل حوزه محرومیت زدایی بهروش مبتکرانه وهمچنین حل نیازهای راهبردی ملی می پردازد.
             </p>
+
+            <img src="{{ asset('site/images/logos.png') }}" alt="توسعه دانش بنیان سینا">
 
         </div>
 
@@ -126,9 +113,9 @@
 
             <h3>ارتباط با ما</h3>
 
-            <p>تهران - ایران</p>
-            <p>021-00000000</p>
-            <p>info@sinavc.ir</p>
+            <p>آدرس: بزرگراه رسالت غرب، ابتدای خروجی آفریقا، مجتمع مرکزی بنیاد مستضعفان، ساختمان شماره 1، طبقه پانزدهم</p>
+            <p>تلفن تماس  : 02188670701</p>
+            <p>info@sina.vc</p>
 
             <div class="socials">
 

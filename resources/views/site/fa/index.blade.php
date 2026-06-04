@@ -374,10 +374,10 @@
         <div class="cta-box">
             <div>
                 <span>Start Your Journey</span>
-                <h2>آماده جذب سرمایه هستید؟</h2>
+                <h2>ارسال طرح و مدارک جهت جذب سرمایه</h2>
             </div>
 
-            <button>ثبت طرح</button>
+            <button type="submit"><a href="{{'https://bestsheet.ir'}}">ثبت و ارسال</a></button>
         </div>
     </section>
 
