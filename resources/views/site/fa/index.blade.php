@@ -348,7 +348,11 @@
                             <div class="partner-card">
 
                                 <div class="partner-logo">
-                                    @if(!empty($company->cover))
+                                    @php
+                                        $companyCoverExists = !empty($company->cover) && file_exists(public_path($company->cover));
+                                    @endphp
+
+                                    @if($companyCoverExists)
                                         <div class="brand-image-box">
                                             <img
                                                 src="{{ asset($company->cover) }}"
@@ -356,9 +360,9 @@
                                             >
                                         </div>
                                     @else
-                                        <div class="brand-placeholder">
-                                            <div class="brand-placeholder-inner">
-                                                <i class="fa-solid fa-handshake"></i>
+                                        <div class="partner-placeholder">
+                                            <div class="partner-placeholder-icon">
+                                                <i class="fa-solid fa-building"></i>
                                             </div>
                                         </div>
                                     @endif
