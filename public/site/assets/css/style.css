@@ -2687,6 +2687,7 @@ body.dark .theme-tool-btn.active {
 
     .socials {
         justify-content: center;
+        gap: 4px;
     }
 }
 
