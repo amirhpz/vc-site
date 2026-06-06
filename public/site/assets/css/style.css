@@ -1316,6 +1316,7 @@ body.dark .theme-tool-btn.active {
 .middle img {
     width: 217px;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .middle p {
@@ -4415,7 +4416,6 @@ body.dark textarea {
 
 .about-premium-team-image img {
     width: 100%;
-    height: 100%;
     border-radius: 30px;
     object-fit: cover;
     object-position: top center;
@@ -5540,7 +5540,252 @@ body.dark .single-event-focus-grid div {
 }
 
 
+/* Single event schedule + registration */
+.single-event-schedule-box,
+.single-event-register-box {
+    margin-top: 38px;
+    border-radius: 32px;
+    border: 1px solid rgba(20, 216, 196, .12);
+    background:
+        radial-gradient(circle at top right, rgba(20, 216, 196, .12), transparent 44%),
+        linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(255, 255, 255, .88));
+    box-shadow: 0 18px 45px rgba(15, 23, 42, .04);
+}
 
+.single-event-schedule-box {
+    padding: 34px;
+}
+
+.single-event-inner-header {
+    margin-bottom: 30px;
+}
+
+.single-event-inner-header span,
+.single-event-register-content span {
+    color: #14d8c4;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.single-event-inner-header h3,
+.single-event-register-content h3 {
+    margin-top: 12px;
+    color: #07111f;
+    font-size: 26px;
+    line-height: 1.8;
+}
+
+.single-event-schedule-list {
+    position: relative;
+    display: grid;
+    gap: 22px;
+}
+
+.single-event-schedule-list::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 27px;
+    width: 2px;
+    background: linear-gradient(to bottom, #14d8c4, rgba(20, 216, 196, .08));
+}
+
+.single-event-schedule-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.single-event-schedule-marker {
+    position: relative;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+    background: #14d8c4;
+    box-shadow: 0 14px 30px rgba(20, 216, 196, .20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-event-schedule-marker span {
+    color: #07111f;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.single-event-schedule-content {
+    padding: 22px 24px;
+    border-radius: 24px;
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, .05);
+    transition: .35s;
+}
+
+.single-event-schedule-content:hover {
+    transform: translateY(-5px);
+    background: rgba(20, 216, 196, .08);
+}
+
+.single-event-schedule-content strong {
+    display: inline-flex;
+    margin-bottom: 10px;
+    color: #0ea896;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.single-event-schedule-content h4 {
+    margin-bottom: 10px;
+    color: #07111f;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.single-event-schedule-content p {
+    margin-bottom: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 2.1;
+    text-align: right;
+}
+
+.single-event-register-box {
+    padding: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    overflow: hidden;
+    position: relative;
+}
+
+.single-event-register-box::before {
+    content: "";
+    position: absolute;
+    left: -90px;
+    top: -90px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(20, 216, 196, .12);
+    filter: blur(55px);
+}
+
+.single-event-register-content {
+    position: relative;
+    z-index: 2;
+}
+
+.single-event-register-content p {
+    max-width: 680px;
+    margin: 14px 0 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 2.2;
+    text-align: right;
+}
+
+.single-event-register-btn {
+    position: relative;
+    z-index: 2;
+    min-width: 160px;
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 18px;
+    background: #14d8c4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #07111f;
+    font-size: 14px;
+    font-weight: 900;
+    white-space: nowrap;
+    transition: .35s;
+}
+
+.single-event-register-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(20, 216, 196, .22);
+}
+
+/* Dark mode */
+body.dark .single-event-schedule-box,
+body.dark .single-event-register-box {
+    background:
+        radial-gradient(circle at top right, rgba(20, 216, 196, .14), transparent 44%),
+        linear-gradient(145deg, rgba(15, 23, 42, .96), rgba(15, 23, 42, .88));
+    border-color: rgba(20, 216, 196, .18);
+}
+
+body.dark .single-event-inner-header h3,
+body.dark .single-event-register-content h3,
+body.dark .single-event-schedule-content h4 {
+    color: #f8fafc;
+}
+
+body.dark .single-event-schedule-content {
+    background: #111c31;
+    border-color: #1e293b;
+}
+
+body.dark .single-event-schedule-content p,
+body.dark .single-event-register-content p {
+    color: #94a3b8;
+}
+
+body.dark .single-event-schedule-content:hover {
+    background: rgba(20, 216, 196, .10);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .single-event-schedule-box,
+    .single-event-register-box {
+        padding: 24px;
+        border-radius: 28px;
+    }
+
+    .single-event-register-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .single-event-register-btn {
+        width: 100%;
+    }
+
+    .single-event-schedule-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .single-event-schedule-list::before {
+        right: 23px;
+    }
+
+    .single-event-schedule-marker {
+        width: 48px;
+        height: 48px;
+        border-radius: 17px;
+    }
+
+    .single-event-schedule-content {
+        padding: 20px;
+    }
+
+    .single-event-inner-header h3,
+    .single-event-register-content h3 {
+        font-size: 22px;
+    }
+}
 
 
 

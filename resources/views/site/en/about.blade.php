@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'درباره ما - توسعه دانش بنیان سینا')
+@section('title', 'About Us - Sina Knowledge-Based Development')
 
 @section('content')
 
@@ -13,24 +13,26 @@
             <span class="about-premium-label">ABOUT SINA VC</span>
 
             <h1>
-                بازوی سرمایه‌گذاری خطرپذیر
+                The Venture Capital Arm
                 <br>
-                برای آینده‌ای دانش‌بنیان
+                for a Knowledge-Based Future
             </h1>
 
             <p>
-                شرکت توسعه دانش‌بنیان سینا به عنوان بازوی سرمایه‌گذاری خطرپذیر بنیاد مستضعفان انقلاب اسلامی
-                در قالب هلدینگ تحقیق و توسعه دانشمند، در مسیر رفع نیازها و چالش‌های فناورانه شرکت‌های تابعه بنیاد،
-                حل مسائل حوزه محرومیت‌زدایی به روش‌های مبتکرانه و پاسخ‌گویی به نیازهای راهبردی ملی فعالیت می‌کند.
+                Sina Knowledge-Based Development acts as the venture capital arm of the
+                Mostazafan Foundation of Islamic Revolution within the Daneshmand Research
+                and Development Holding. The company operates to address technological needs
+                and challenges of the Foundation’s affiliated companies, solve deprivation-related
+                issues through innovative approaches, and respond to national strategic needs.
             </p>
 
             <div class="about-premium-actions">
                 <a href="{{ route('portfolio') }}" class="primary-btn about-premium-btn">
-                    مشاهده پورتفو
+                    View Portfolio
                 </a>
 
                 <a href="{{ route('contact') }}" class="secondary-btn about-premium-btn">
-                    ارتباط با ما
+                    Contact Us
                 </a>
             </div>
         </div>
@@ -44,10 +46,10 @@
                     <i class="fa-solid fa-lightbulb"></i>
                 </div>
 
-                <h3>نوآوری اثرگذار</h3>
+                <h3>Impactful Innovation</h3>
 
                 <p>
-                    اتصال سرمایه، فناوری و تجربه برای خلق رشد پایدار
+                    Connecting capital, technology, and experience to create sustainable growth
                 </p>
             </div>
 
@@ -71,7 +73,7 @@
     <section class="about-premium-intro">
         <div class="section-header">
             <span>Who We Are</span>
-            <h2>معرفی صندوق</h2>
+            <h2>Fund Introduction</h2>
         </div>
 
         <div class="about-premium-intro-box">
@@ -79,32 +81,34 @@
                 <span>Corporate Venture Capital</span>
 
                 <h3>
-                    ما فقط سرمایه‌گذار نیستیم؛
+                    We are not just investors;
                     <br>
-                    شریک رشد کسب‌وکارهای آینده‌ساز هستیم.
+                    we are growth partners for future-driven businesses.
                 </h3>
 
                 <p>
-                    توسعه دانش‌بنیان سینا با تمرکز بر سرمایه‌گذاری خطرپذیر، تلاش می‌کند ظرفیت‌های نوآورانه را
-                    شناسایی، ارزیابی و توانمند کند. رویکرد ما صرفاً تزریق سرمایه نیست؛ بلکه همراهی تخصصی،
-                    منتورینگ، اتصال به شبکه‌های اثرگذار، تحلیل بازار و کمک به ساخت کسب‌وکارهای پایدار است.
+                    Sina Knowledge-Based Development focuses on venture capital investment
+                    to identify, evaluate, and empower innovative capacities. Our approach is
+                    not limited to capital injection; it includes specialized support, mentoring,
+                    access to influential networks, market analysis, and helping companies build
+                    sustainable business models.
                 </p>
             </div>
 
             <div class="about-premium-intro-stats">
                 <div class="about-premium-stat">
                     <strong>+12</strong>
-                    <span>شرکت فعال</span>
+                    <span>Active Companies</span>
                 </div>
 
                 <div class="about-premium-stat">
                     <strong>+27</strong>
-                    <span>سرمایه‌گذاری</span>
+                    <span>Investments</span>
                 </div>
 
                 <div class="about-premium-stat">
                     <strong>+680</strong>
-                    <span>طرح بررسی‌شده</span>
+                    <span>Reviewed Proposals</span>
                 </div>
             </div>
         </div>
@@ -113,7 +117,7 @@
     <section class="about-premium-values">
         <div class="section-header">
             <span>Our Foundation</span>
-            <h2>ماموریت، چشم‌انداز و ارزش‌ها</h2>
+            <h2>Mission, Vision and Values</h2>
         </div>
 
         <div class="about-premium-values-grid">
@@ -124,13 +128,16 @@
 
                 <span>Mission</span>
 
-                <h3>ماموریت</h3>
+                <h3>Mission</h3>
 
                 <p>
-                    ماموریت ما کمک به ایجاد و رشد کسب‌وکارهای پایدار و قابل رقابت در بازارهای داخلی و خارجی است؛
-                    به نحوی که با تأمین سرمایه، تیم کارشناسی خبره، منتورینگ تخصصی و ارتباط اثربخش با شبکه‌ای
-                    از سرمایه‌گذاران، افراد و نهادهای اثرگذار، در حل مسائل مناطق محروم، بهبود زنجیره ارزش بنیاد
-                    مستضعفان و تقویت راهبردهای کلان ملی نقش‌آفرینی کنیم.
+                    Our mission is to support the creation and growth of sustainable and competitive
+                    businesses in domestic and international markets. We do this by providing the
+                    required capital, expert teams, specialized mentoring, and effective connections
+                    to a network of investors, individuals, and influential institutions in the investee’s
+                    field of activity. Through this approach, we aim to contribute to solving issues
+                    in underprivileged regions, improving the value chain of the Mostazafan Foundation,
+                    and strengthening national strategic priorities.
                 </p>
             </div>
 
@@ -141,11 +148,12 @@
 
                 <span>Vision</span>
 
-                <h3>چشم‌انداز</h3>
+                <h3>Vision</h3>
 
                 <p>
-                    تبدیل شدن به یکی از بازیگران اصلی اکوسیستم سرمایه‌گذاری خطرپذیر کشور از طریق شناسایی
-                    فرصت‌های فناورانه، حمایت هوشمندانه از تیم‌های نوآور و ایجاد ارزش پایدار در سطح ملی.
+                    To become one of the key players in the country’s venture capital ecosystem
+                    by identifying technology-driven opportunities, intelligently supporting innovative
+                    teams, and creating sustainable value at the national level.
                 </p>
             </div>
 
@@ -156,11 +164,12 @@
 
                 <span>Values</span>
 
-                <h3>ارزش‌ها</h3>
+                <h3>Values</h3>
 
                 <p>
-                    شفافیت، نوآوری، مسئولیت‌پذیری، توسعه پایدار، همکاری بلندمدت و تمرکز بر اثرگذاری واقعی،
-                    اصولی هستند که تصمیم‌گیری‌ها و مسیر سرمایه‌گذاری ما را شکل می‌دهند.
+                    Transparency, innovation, responsibility, sustainable development, long-term
+                    collaboration, and real impact are the principles that shape our decisions and
+                    investment approach.
                 </p>
             </div>
         </div>
@@ -169,7 +178,7 @@
     <section class="about-premium-roadmap">
         <div class="section-header">
             <span>How We Work</span>
-            <h2>مسیر خلق ارزش</h2>
+            <h2>Value Creation Path</h2>
         </div>
 
         <div class="about-premium-timeline">
@@ -178,9 +187,10 @@
             <div class="about-premium-timeline-item">
                 <div class="timeline-number">01</div>
                 <div class="timeline-card">
-                    <h3>شناسایی چالش و فرصت</h3>
+                    <h3>Identifying Challenges and Opportunities</h3>
                     <p>
-                        بررسی نیازهای فناورانه، مسائل محرومیت‌زدایی و فرصت‌های راهبردی در سطح ملی و سازمانی.
+                        Reviewing technological needs, deprivation-related challenges, and strategic
+                        opportunities at both national and organizational levels.
                     </p>
                 </div>
             </div>
@@ -188,9 +198,10 @@
             <div class="about-premium-timeline-item">
                 <div class="timeline-number">02</div>
                 <div class="timeline-card">
-                    <h3>ارزیابی تخصصی</h3>
+                    <h3>Specialized Evaluation</h3>
                     <p>
-                        تحلیل تیم، بازار، فناوری، مدل درآمدی، قابلیت رشد و میزان اثرگذاری طرح یا شرکت.
+                        Analyzing the team, market, technology, revenue model, growth potential,
+                        and impact level of the proposal or company.
                     </p>
                 </div>
             </div>
@@ -198,9 +209,10 @@
             <div class="about-premium-timeline-item">
                 <div class="timeline-number">03</div>
                 <div class="timeline-card">
-                    <h3>سرمایه‌گذاری و توانمندسازی</h3>
+                    <h3>Investment and Empowerment</h3>
                     <p>
-                        تأمین سرمایه، منتورینگ، شبکه‌سازی، مشاوره تخصصی و کمک به توسعه ساختار کسب‌وکار.
+                        Providing capital, mentoring, networking, specialized consulting, and support
+                        in developing the business structure.
                     </p>
                 </div>
             </div>
@@ -208,9 +220,10 @@
             <div class="about-premium-timeline-item">
                 <div class="timeline-number">04</div>
                 <div class="timeline-card">
-                    <h3>رشد، مقیاس‌پذیری و اثرگذاری</h3>
+                    <h3>Growth, Scalability and Impact</h3>
                     <p>
-                        همراهی در مسیر توسعه بازار، پایداری مالی، افزایش اثر اجتماعی و خلق ارزش بلندمدت.
+                        Supporting market development, financial sustainability, social impact, and
+                        long-term value creation.
                     </p>
                 </div>
             </div>
@@ -220,70 +233,68 @@
     <section class="about-premium-team">
         <div class="section-header">
             <span>Management Team</span>
-            <h2>معرفی تیم مدیریت</h2>
+            <h2>Management Team</h2>
         </div>
 
         <div class="management-grid about-premium-management-grid">
 
-
-
             <div class="about-premium-team-card">
                 <div class="about-premium-team-image">
-                    <img src="{{ asset('site/images/team/investment-manager.png') }}" alt="سید طاها میرمحمدی">
+                    <img src="{{ asset('site/images/team/investment-manager.png') }}" alt="Seyed Taha Mirmohammadi">
                 </div>
 
                 <div class="about-premium-team-body">
                     <span>CIO</span>
-                    <h3>سید طاها میرمحمدی</h3>
-                    <p>مدیر برنامه‌ریزی و سرمایه‌گذاری</p>
+                    <h3>Seyed Taha Mirmohammadi</h3>
+                    <p>Planning and Investment Manager</p>
                 </div>
             </div>
 
             <div class="about-premium-team-card">
                 <div class="about-premium-team-image">
-                    <img src="{{ asset('site/images/team/it-manager.png') }}" alt="محمد حسین دیوان بیگی">
+                    <img src="{{ asset('site/images/team/it-manager.png') }}" alt="Mohammad Hossein Divanbeigi">
                 </div>
 
                 <div class="about-premium-team-body">
                     <span>COO</span>
-                    <h3>محمد حسین دیوان بیگی</h3>
-                    <p>مدیر اداری، پشتیبانی و فناوری</p>
+                    <h3>Mohammad Hossein Divanbeigi</h3>
+                    <p>Administrative, Support and Technology Manager</p>
                 </div>
             </div>
 
             <div class="about-premium-team-card about-premium-team-card-ceo">
                 <div class="about-premium-team-image">
-                    <img src="{{ asset('site/images/team/ceo.png') }}" alt="دکتر مسعود کفایتمند">
+                    <img src="{{ asset('site/images/team/ceo.png') }}" alt="Dr. Masoud Kefayatmand">
                 </div>
 
                 <div class="about-premium-team-body">
                     <span>CEO</span>
-                    <h3>دکتر مسعود کفایتمند</h3>
-                    <p>مدیرعامل</p>
+                    <h3>Dr. Masoud Kefayatmand</h3>
+                    <p>Chief Executive Officer</p>
                 </div>
             </div>
 
             <div class="about-premium-team-card">
                 <div class="about-premium-team-image">
-                    <img src="{{ asset('site/images/team/company-manager.png') }}" alt="نوید باقری نیا">
+                    <img src="{{ asset('site/images/team/company-manager.png') }}" alt="Navid Bagherinia">
                 </div>
 
                 <div class="about-premium-team-body">
                     <span>CS</span>
-                    <h3>نوید باقری نیا</h3>
-                    <p>مدیر امور مجامع و شرکت‌ها</p>
+                    <h3>Navid Bagherinia</h3>
+                    <p>Corporate Affairs and Assemblies Manager</p>
                 </div>
             </div>
 
             <div class="about-premium-team-card">
                 <div class="about-premium-team-image">
-                    <img src="{{ asset('site/images/team/finance-manager.png') }}" alt="آتنا باشوکی">
+                    <img src="{{ asset('site/images/team/finance-manager.png') }}" alt="Atena Bashouki">
                 </div>
 
                 <div class="about-premium-team-body">
                     <span>CFO</span>
-                    <h3>آتنا باشوکی</h3>
-                    <p>مدیر مالی و حسابداری</p>
+                    <h3>Atena Bashouki</h3>
+                    <p>Finance and Accounting Manager</p>
                 </div>
             </div>
 
