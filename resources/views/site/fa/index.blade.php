@@ -241,7 +241,9 @@
                                 <div class="portfolio-logo">
                                     @if(!empty($project->cover))
                                         <div class="brand-image-box">
+                                            @if(!empty($project->cover))
                                             <img src="{{ asset($project->cover) }}" alt="{{ $project->title }}">
+                                            @endif
                                         </div>
                                     @else
                                         <div class="brand-placeholder">
@@ -294,11 +296,7 @@
 
                                 <div class="news-image">
                                     @if(!empty($post->cover))
-                                        <img
-                                            src="{{ asset($post->cover) }}"
-                                            alt="{{ $post->title }}"
-                                            class="card-cover-image"
-                                        >
+                                        <img src="{{ asset($post->cover) }}" alt="{{ $post->title }}" class="card-cover-image">
                                     @endif
                                 </div>
 
@@ -354,10 +352,9 @@
 
                                     @if($companyCoverExists)
                                         <div class="brand-image-box">
-                                            <img
-                                                src="{{ asset($company->cover) }}"
-                                                alt="{{ $company->title }}"
-                                            >
+                                            @if(!empty($company->cover))
+                                                <img src="{{ asset($company->cover) }}" alt="{{ $company->title }}">
+                                            @endif
                                         </div>
                                     @else
                                         <div class="partner-placeholder">
