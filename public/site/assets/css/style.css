@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 200;
     src: url(../fonts/iransans/eot/IRANSansWeb_UltraLight.eot);
@@ -7,7 +7,7 @@
     url(../fonts/iransans/woff/IRANSansWeb_UltraLight.woff) format("woff"), url(../fonts/iransans/ttf/IRANSansWeb_UltraLight.ttf) format("truetype");
 }
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 300;
     src: url(../fonts/iransans/eot/IRANSansWeb_Light.eot);
@@ -15,7 +15,7 @@
     url(../fonts/iransans/ttf/IRANSansWeb_Light.ttf) format("truetype");
 }
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/iransans/eot/IRANSansWeb.eot);
@@ -23,7 +23,7 @@
     url(../fonts/iransans/ttf/IRANSansWeb.ttf) format("truetype");
 }
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 500;
     src: url(../fonts/iransans/eot/IRANSansWeb_Medium.eot);
@@ -31,7 +31,7 @@
     url(../fonts/iransans/ttf/IRANSansWeb_Medium.ttf) format("truetype");
 }
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 700;
     src: url(../fonts/iransans/eot/IRANSansWeb_Bold.eot);
@@ -39,7 +39,7 @@
     url(../fonts/iransans/ttf/IRANSansWeb_Bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: "IRANSans";
+    font-family: "IRANSansWeb";
     font-style: normal;
     font-weight: 900;
     src: url(../fonts/iransans/eot/IRANSansWeb_Black.eot);
