@@ -68,48 +68,6 @@
         </div>
     </section>
 
-    <section class="about-premium-intro">
-        <div class="section-header">
-            <span>Who We Are</span>
-            <h2>معرفی صندوق</h2>
-        </div>
-
-        <div class="about-premium-intro-box">
-            <div class="about-premium-intro-text">
-                <span>Corporate Venture Capital</span>
-
-                <h3>
-                    ما فقط سرمایه‌گذار نیستیم؛
-                    <br>
-                    شریک رشد کسب‌وکارهای آینده‌ساز هستیم.
-                </h3>
-
-                <p>
-                    توسعه دانش‌بنیان سینا با تمرکز بر سرمایه‌گذاری خطرپذیر، تلاش می‌کند ظرفیت‌های نوآورانه را
-                    شناسایی، ارزیابی و توانمند کند. رویکرد ما صرفاً تزریق سرمایه نیست؛ بلکه همراهی تخصصی،
-                    منتورینگ، اتصال به شبکه‌های اثرگذار، تحلیل بازار و کمک به ساخت کسب‌وکارهای پایدار است.
-                </p>
-            </div>
-
-            <div class="about-premium-intro-stats">
-                <div class="about-premium-stat">
-                    <strong>+12</strong>
-                    <span>شرکت فعال</span>
-                </div>
-
-                <div class="about-premium-stat">
-                    <strong>+27</strong>
-                    <span>سرمایه‌گذاری</span>
-                </div>
-
-                <div class="about-premium-stat">
-                    <strong>+680</strong>
-                    <span>طرح بررسی‌شده</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="about-premium-values">
         <div class="section-header">
             <span>Our Foundation</span>

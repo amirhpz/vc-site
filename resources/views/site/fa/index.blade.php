@@ -101,12 +101,12 @@
             </div>
 
             <div class="sector-card">
-                <i class="fa-solid fa-seedling"></i>
+                <i class="fa-solid fa-building"></i>
                 <h3> صنعت ساختمان </h3>
             </div>
 
             <div class="sector-card">
-                <i class="fa-solid fa-bolt"></i>
+                <i class="fa-solid fa-oil-well"></i>
                 <h3>نفت و گاز</h3>
             </div>
 
