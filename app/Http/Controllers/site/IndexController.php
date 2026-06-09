@@ -11,25 +11,14 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $projects = Project::query()
-            ->where('invest_step', '>=', 10)
-            ->where('invest_step', '<', 20)
-            ->latest()
-            ->get();
+        $projects = Project::query()->where('invest_step', '>=', 10)->where('invest_step', '<', 20)->latest()->get();
 
-        $posts = Post::query()
-            ->where('status', 4)
-            ->latest()
-            ->get();
+        $posts = Post::query()->where('status', 4)->latest()->take(10)->get();
 
-        $companies = Company::query()
-            ->where('status', 4)
-            ->latest()
-            ->get();
+        $companies = Company::query()->where('status', 4)->latest()->get();
 
         return view($this->localizedView('index'), compact('projects', 'posts', 'companies'));
     }
-
     public function contact()
     {
         return view($this->localizedView('contact'));
@@ -53,28 +42,16 @@ class IndexController extends Controller
 
     public function newsShow($slug)
     {
-        $post = Post::query()
-            ->where('slug', $slug)
-            ->where('status', 4)
-            ->firstOrFail();
+        $post = Post::query()->where('slug', $slug)->where('status', 4)->firstOrFail();
 
-        $relatedPosts = Post::query()
-            ->where('status', 4)
-            ->where('id', '!=', $post->id)
-            ->orderByRaw('priority IS NULL, priority ASC')
-            ->orderByDesc('created_at')
-            ->limit(3)
-            ->get();
+        $relatedPosts = Post::query()->where('status', 4)->where('id', '!=', $post->id)->orderByRaw('priority IS NULL, priority ASC')->orderByDesc('created_at')->limit(3)->get();
 
         return view($this->localizedView('single-new'), compact('post', 'relatedPosts'));
     }
 
     public function portfolio()
     {
-        $projects = Project::query()
-            ->where('invest_step', '>=', 10)
-            ->orderByDesc('id')
-            ->paginate(12);
+        $projects = Project::query()->where('invest_step', '>=', 10)->orderByDesc('id')->paginate(12);
 
         return view($this->localizedView('portfolio'), compact('projects'));
     }
@@ -99,9 +76,7 @@ class IndexController extends Controller
 
         abort_if(!$event, 404);
 
-        $relatedEvents = $events
-            ->where('slug', '!=', $slug)
-            ->values();
+        $relatedEvents = $events->where('slug', '!=', $slug)->values();
 
         return view($this->localizedView('single-event'), compact('event', 'relatedEvents'));
     }

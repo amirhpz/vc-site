@@ -46,7 +46,7 @@
             'phone_label' => 'تلفن تماس',
             'phone' => '02188670701',
             'postal_code_label' => 'کد پستی',
-            'postal_code' => '1010101010',
+            'postal_code' => '1519613525',
             'email_label' => 'ایمیل',
             'email' => 'info@sina.vc',
 
@@ -184,7 +184,7 @@
         <div class="footer-column middle">
             <img src="{{ asset('site/assets/images/logo.png') }}" alt="{{ $t['logo_alt'] }}">
 
-            <p>
+            <p style="text-align: justify">
                 {{ $t['footer_description'] }}
             </p>
 

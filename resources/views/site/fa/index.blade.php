@@ -81,7 +81,7 @@
     <section class="sectors">
         <div class="section-header">
             <span>Investment Sectors</span>
-            <h2>کلان محورهای سرمایه‌گذاری</h2>
+            <h2> محورهای سرمایه‌گذاری</h2>
         </div>
 
         <div class="sector-grid">
@@ -92,27 +92,27 @@
 
             <div class="sector-card">
                 <i class="fa-solid fa-truck-fast"></i>
-                <h3>حمل و نقل و لجستیک</h3>
-            </div>
-
-            <div class="sector-card">
-                <i class="fa-solid fa-bowl-food"></i>
-                <h3>صنایع غذایی</h3>
+                <h3> حمل و نقل ترکیبی </h3>
             </div>
 
             <div class="sector-card">
                 <i class="fa-solid fa-seedling"></i>
-                <h3>کشاورزی و دامپروری</h3>
+                <h3> امنیت غذایی </h3>
+            </div>
+
+            <div class="sector-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3> صنعت ساختمان </h3>
             </div>
 
             <div class="sector-card">
                 <i class="fa-solid fa-bolt"></i>
-                <h3>برق و انرژی</h3>
+                <h3>نفت و گاز</h3>
             </div>
 
             <div class="sector-card">
                 <i class="fa-solid fa-chart-line"></i>
-                <h3>فناوری‌های مالی</h3>
+                <h3> اقتصاد دیجیتال </h3>
             </div>
 
             <div class="sector-card">
@@ -133,7 +133,7 @@
                 <div class="stat-glow"></div>
 
                 <div class="stat-number">
-                    <span class="counter" data-target="12">0</span>
+                    <span class="counter" data-target="10">0</span>
                     <small>+</small>
                 </div>
 
@@ -144,7 +144,7 @@
                 <div class="stat-glow"></div>
 
                 <div class="stat-number">
-                    <span class="counter" data-target="4">0</span>
+                    <span class="counter" data-target="3">0</span>
                 </div>
 
                 <h3>در حال مذاکره</h3>
@@ -154,7 +154,7 @@
                 <div class="stat-glow"></div>
 
                 <div class="stat-number">
-                    <span class="counter" data-target="27">0</span>
+                    <span class="counter" data-target="31">0</span>
                     <small>+</small>
                 </div>
 
@@ -221,7 +221,7 @@
     <section class="portfolio">
         <div class="section-header">
             <span>Portfolio Companies</span>
-            <h2>شرکت‌های سرمایه‌پذیر</h2>
+            <h2>سبد سرمایه گذاری</h2>
         </div>
 
         @if($projects->count())
