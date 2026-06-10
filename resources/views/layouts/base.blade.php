@@ -101,6 +101,7 @@
                 title="فارسی"
                 aria-label="فارسی"
             >
+                <img src="{{ asset('site/assets/images/flags/fa.svg') }}" alt="FA" class="tool-flag-img">
                 <span class="tool-label">FA</span>
             </a>
 
@@ -110,6 +111,7 @@
                 title="English"
                 aria-label="English"
             >
+                <img src="{{ asset('site/assets/images/flags/en.svg') }}" alt="EN" class="tool-flag-img">
                 <span class="tool-label">EN</span>
             </a>
         </div>

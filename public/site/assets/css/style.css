@@ -391,6 +391,14 @@ section {
     letter-spacing: .5px;
 }
 
+.tool-flag-img {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Theme toggle visual */
 .theme-tool {
     position: relative;
