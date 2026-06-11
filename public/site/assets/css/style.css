@@ -1048,6 +1048,7 @@ body.dark .theme-tool-btn.active {
     color: #64748b;
     font-size: 14px;
     line-height: 2;
+    text-align: justify;
 }
 
 /* News swiper */
@@ -5792,6 +5793,23 @@ body.dark .single-event-schedule-content:hover {
         font-size: 22px;
     }
 }
+.cta-btn{
+    width:180px;
+    height:60px;
+    border-radius:18px;
+    background:#14d8c4;
+    color:#07111f;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+    z-index: 9;
+}
 
+.cta-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(20,216,196,.2);
+}
 
 

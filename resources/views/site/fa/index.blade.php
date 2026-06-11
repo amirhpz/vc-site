@@ -386,8 +386,9 @@
                 <h2>ارسال طرح و مدارک جهت جذب سرمایه</h2>
             </div>
 
-            <button type="submit"><a href="{{'https://bestsheet.ir'}}">ثبت و ارسال</a></button>
+            <a href="https://bestsheet.ir" target="_blank" rel="noopener noreferrer" class="cta-btn">
+                ثبت و ارسال
+            </a>
         </div>
     </section>
-
 @endsection
