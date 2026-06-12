@@ -426,6 +426,14 @@ body.dark .theme-tool::before {
     right: 44px;
 }
 
+html[dir="ltr"] body.light .theme-tool::before {
+    right: 44px;
+}
+
+html[dir="ltr"] body.dark .theme-tool::before {
+    right: 4px;
+}
+
 .theme-tool-btn {
     position: relative;
     z-index: 2;
@@ -2334,6 +2342,14 @@ body.dark .theme-tool-btn.active {
         right: 40px;
     }
 
+    html[dir="ltr"] body.light .theme-tool::before {
+        right: 40px;
+    }
+
+    html[dir="ltr"] body.dark .theme-tool::before {
+        right: 4px;
+    }
+
     .theme-tool-btn {
         width: 26px;
         height: 26px;
@@ -2906,6 +2922,14 @@ textarea::placeholder {
 
     body.dark .theme-tool::before {
         right: 40px;
+    }
+
+    html[dir="ltr"] body.light .theme-tool::before {
+        right: 40px;
+    }
+
+    html[dir="ltr"] body.dark .theme-tool::before {
+        right: 4px;
     }
 
     .theme-tool-btn {
@@ -5812,4 +5836,29 @@ body.dark .single-event-schedule-content:hover {
     box-shadow:0 18px 40px rgba(20,216,196,.2);
 }
 
+body.dark .cta-box{
+    background:
+        radial-gradient(circle at top left, rgba(20,216,196,.16), transparent 34%),
+        linear-gradient(135deg, rgba(15,23,42,.92), rgba(2,6,23,.96));
+    border-color:rgba(94,234,212,.18);
+    box-shadow:0 24px 60px rgba(0,0,0,.34), 0 8px 24px rgba(20,216,196,.08);
+}
 
+body.dark .cta-box::before{
+    background:rgba(20,216,196,.12);
+}
+
+body.dark .cta-box span{
+    color:#5eead4;
+}
+
+body.dark .cta-box h2{
+    color:#f8fafc;
+}
+
+body.dark .cta-box .cta-btn,
+body.dark .cta-box button{
+    background:#14d8c4;
+    color:#04111d;
+    box-shadow:0 18px 40px rgba(20,216,196,.18);
+}

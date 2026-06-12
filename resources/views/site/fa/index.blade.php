@@ -46,10 +46,46 @@
     <meta name="twitter:image" content="{{ isset($seoImage) ? asset($seoImage) : asset('site/assets/images/icon.png') }}">
 
     <meta name="twitter:url" content="{{ url()->current() }}">
+
+    <style>
+        body.dark .fa-home-hero .heroSwiper {
+            border: 1px solid rgba(20, 216, 196, .14);
+            box-shadow: 0 32px 90px rgba(0, 0, 0, .46), 0 10px 35px rgba(20, 216, 196, .08);
+        }
+
+        body.dark .fa-home-hero .hero-slide::before {
+            background: linear-gradient(
+                90deg,
+                rgba(2, 6, 23, .86) 0%,
+                rgba(2, 6, 23, .72) 42%,
+                rgba(2, 6, 23, .46) 100%
+            );
+        }
+
+        body.dark .fa-home-hero .hero-overlay {
+            background:
+                radial-gradient(circle at top right, rgba(20, 216, 196, .22), transparent 34%),
+                radial-gradient(circle at bottom left, rgba(20, 216, 196, .10), transparent 30%),
+                linear-gradient(180deg, rgba(2, 6, 23, .10), rgba(2, 6, 23, .28));
+        }
+
+        body.dark .fa-home-hero .hero-content span {
+            color: #5eead4;
+        }
+
+        body.dark .fa-home-hero .hero-content h1 {
+            color: #f8fafc;
+            text-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+        }
+
+        body.dark .fa-home-hero .hero-content p {
+            color: #dbe4ee;
+        }
+    </style>
 @endsection
 @section('content')
 
-    <section class="hero">
+    <section class="hero fa-home-hero">
         <div class="hero-layout">
             <div class="hero-slider-wrapper">
                 <div class="swiper heroSwiper">

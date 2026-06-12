@@ -118,7 +118,7 @@
 
         <div class="site-tool-group theme-tool">
             <a
-                href="{{ route('theme.switch', 'light') }}"
+                href="{{ route('theme.switch', ['theme' => 'light', 'redirect' => url()->full()]) }}"
                 class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'light' ? 'active' : '' }}"
                 title="Light mode"
                 aria-label="Light mode"
@@ -127,7 +127,7 @@
             </a>
 
             <a
-                href="{{ route('theme.switch', 'dark') }}"
+                href="{{ route('theme.switch', ['theme' => 'dark', 'redirect' => url()->full()]) }}"
                 class="theme-tool-btn {{ session('theme', config('theme.default', 'light')) === 'dark' ? 'active' : '' }}"
                 title="Dark mode"
                 aria-label="Dark mode"

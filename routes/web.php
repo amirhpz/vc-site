@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\site\IndexController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index'])->name('/');
@@ -12,7 +13,7 @@ Route::get('/news', [IndexController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [IndexController::class, 'newsShow'])->name('news.show');
 Route::get('/portfolio', [IndexController::class, 'portfolio'])->name('portfolio');
 
-Route::get('/theme/{theme}', function ($theme) {
+Route::get('/theme/{theme}', function (Request $request, $theme) {
 
     abort_unless(
         in_array($theme,['light','dark']),
@@ -22,6 +23,12 @@ Route::get('/theme/{theme}', function ($theme) {
     session([
         'theme' => $theme
     ]);
+
+    $redirect = $request->query('redirect');
+
+    if (filled($redirect) && str_starts_with($redirect, url('/'))) {
+        return redirect()->to($redirect);
+    }
 
     return back();
 

@@ -2,9 +2,47 @@
 
 @section('title', 'Corporate Venture Capital Fund - Sina Knowledge-Based Development')
 
+@section('meta')
+    <style>
+        body.dark .en-home-hero .heroSwiper {
+            border: 1px solid rgba(20, 216, 196, .14);
+            box-shadow: 0 32px 90px rgba(0, 0, 0, .46), 0 10px 35px rgba(20, 216, 196, .08);
+        }
+
+        body.dark .en-home-hero .hero-slide::before {
+            background: linear-gradient(
+                90deg,
+                rgba(2, 6, 23, .88) 0%,
+                rgba(2, 6, 23, .74) 38%,
+                rgba(2, 6, 23, .48) 100%
+            );
+        }
+
+        body.dark .en-home-hero .hero-overlay {
+            background:
+                radial-gradient(circle at top left, rgba(20, 216, 196, .22), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(20, 216, 196, .10), transparent 30%),
+                linear-gradient(180deg, rgba(2, 6, 23, .10), rgba(2, 6, 23, .28));
+        }
+
+        body.dark .en-home-hero .hero-content span {
+            color: #5eead4;
+        }
+
+        body.dark .en-home-hero .hero-content h1 {
+            color: #f8fafc;
+            text-shadow: 0 12px 35px rgba(0, 0, 0, .35);
+        }
+
+        body.dark .en-home-hero .hero-content p {
+            color: #dbe4ee;
+        }
+    </style>
+@endsection
+
 @section('content')
 
-    <section class="hero">
+    <section class="hero en-home-hero">
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
 
