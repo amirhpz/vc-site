@@ -878,7 +878,6 @@ body.dark .theme-tool-btn.active {
 .stat-number span {
     color: #14d8c4;
     font-size: 88px;
-    font-weight: 900;
     line-height: 1;
     text-shadow: 0 10px 30px rgba(20, 216, 196, .2);
 }
