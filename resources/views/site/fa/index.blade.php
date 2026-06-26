@@ -1,9 +1,9 @@
 @extends('layouts.base')
 
-@section('title', 'صندوق سرمایه‌گذاری خطرپذیر شرکتی - توسعه دانش بنیان سینا')
+@section('title', 'شرکت سرمایه‌گذاری خطرپذیر توسعه دانش بنیان سینا')
 
 @section('meta')
-    <meta name="description" content="{{ $seoDescription ?? 'شرکت سرمایه‌گذاری توسعه دانش بنیان سینا،شرکت سرمایه‌گذاری، خطرپذیر فعال در سرمایه‌گذاری استارتاپ‌ها، فناوری‌های نوآورانه و کسب‌وکارهای دانش ‌بنیان' }}">
+    <meta name="description" content="{{ $seoDescription ?? 'شرکت سرمایه‌گذاری خطرپذیر توسعه دانش بنیان سینا،شرکت سرمایه‌گذاری، خطرپذیر فعال در سرمایه‌گذاری استارتاپ‌ها، فناوری‌های نوآورانه و کسب‌وکارهای دانش ‌بنیان' }}">
 
     <meta name="keywords" content="{{ $seoKeywords ?? 'Venture Capital, VC, Startup, Investment, Innovation, Technology, Venture Capital Firm, توسعه دانش بنیان سینا، سرمایه گذاری خطرپذیر, سرمایه گذاری استارتاپی' }}">
 
