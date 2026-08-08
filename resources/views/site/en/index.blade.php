@@ -46,62 +46,24 @@
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide hero-slide">
+                <div class="swiper-slide hero-slide" style="background-image:url('{{ asset('site/slider/en/1.png') }}');">
                     <div class="hero-overlay"></div>
-
-                    <div class="hero-content">
-                        <span>VENTURE CAPITAL</span>
-
-                        <h1>
-                            Investing in the Future
-                            <br>
-                            of Technology and Innovation
-                        </h1>
-
-                        <p>
-                            Supporting startups and knowledge-based ventures
-                            on their path toward growth and transformation
-                            within the technology ecosystem.
-                        </p>
-
-                        <div class="hero-buttons">
-                            <button class="primary-btn">
-                                Submit Proposal
-                            </button>
-
-                            <button class="secondary-btn">
-                                View Portfolio
-                            </button>
-                        </div>
-                    </div>
+{{--                    <div class="hero-content" style="text-align: right">--}}
+{{--                        <span>VENTURE CAPITAL</span>--}}
+{{--                        <h2>Construction industries and advanced construction technologies</h2>--}}
+{{--                        <p>Supporting startups and knowledge-based projects in the growth and development of value chain industries Mostazafan Foundation</p>--}}
+{{--                    </div>--}}
                 </div>
 
-                <div class="swiper-slide hero-slide slide2">
+                <div class="swiper-slide hero-slide" style="background-image:url('{{ asset('site/slider/en/2.png') }}');">
                     <div class="hero-overlay"></div>
-
-                    <div class="hero-content">
-                        <span>SMART INVESTMENT</span>
-
-                        <h1>
-                            Building the Future
-                            <br>
-                            Through Smart Investment
-                        </h1>
-
-                        <p>
-                            Supporting emerging startups and future-oriented technologies.
-                        </p>
-
-                        <div class="hero-buttons">
-                            <button class="primary-btn">
-                                Start Collaboration
-                            </button>
-                        </div>
-                    </div>
+{{--                    <div class="hero-content" style="text-align: right">--}}
+{{--                        <span>VENTURE CAPITAL</span>--}}
+{{--                        <h2>Artificial Intelligence, Digital Economy, and Industrial Intelligence</h2>--}}
+{{--                        <p>Cybersecurity and data protection, industrial automation and intelligence, digital economy and data analytics, cloud computing and digital infrastructure, artificial intelligence and machine learning</p>--}}
+{{--                    </div>--}}
                 </div>
-
             </div>
-
             <div class="swiper-pagination"></div>
         </div>
     </section>
