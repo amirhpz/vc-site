@@ -267,31 +267,10 @@
                     @foreach($projects as $project)
                         <div class="swiper-slide">
 
-                            <div class="portfolio-card">
-                                <div class="portfolio-logo">
-                                    @if(!empty($project->cover))
-                                        <div class="brand-image-box">
-                                            @if(!empty($project->cover))
-                                            <img src="{{ asset($project->cover) }}" alt="{{ $project->title }}">
-                                            @endif
-                                        </div>
-                                    @else
-                                        <div class="brand-placeholder">
-                                            <div class="brand-placeholder-inner">
-                                                <i class="fa-solid fa-rocket"></i>
-                                            </div>
-                                        </div>
-                                    @endif
-                                </div>
-
-                                <div class="portfolio-content">
-                                    <h3>{{ $project->title }}</h3>
-
-                                    <p>
-                                        {{ Str::limit(strip_tags($project->description ?? ''), 120) }}
-                                    </p>
-                                </div>
-                            </div>
+                            @include('site.partials.portfolio-card', [
+                                'project' => $project,
+                                'showSummary' => true,
+                            ])
 
                         </div>
                     @endforeach
@@ -340,6 +319,13 @@
                                     <p>
                                         {{ Str::limit(strip_tags($post->description ?? ''), 120) }}
                                     </p>
+                                </div>
+
+                                <div class="news-card-button">
+                                    <a href="{{ route('news.show', $post->slug) }}" class="news-card-btn">
+                                        ادامه خبر
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </a>
                                 </div>
 
                             </div>

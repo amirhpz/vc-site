@@ -1121,6 +1121,7 @@ body.dark .theme-tool-btn.active {
     background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3)), url("#");
     background-size: cover;
     background-position: center;
+
 }
 
 .news2 {
@@ -1672,7 +1673,7 @@ body.dark .theme-tool-btn.active {
 .news-page-card {
     position: relative;
     min-height: 100%;
-    border-radius: 34px;
+    border-radius: 15px;
     overflow: hidden;
     background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(255, 255, 255, .88));
     border: 1px solid rgba(20, 216, 196, .1);
@@ -5865,4 +5866,500 @@ body.dark .cta-box button{
     background:#14d8c4;
     color:#04111d;
     box-shadow:0 18px 40px rgba(20,216,196,.18);
+}
+
+/* ==========================================================
+   PORTFOLIO CARD ACTIONS + COMPANY MODAL
+   ========================================================== */
+
+/* ---------- Card layout: CTA pinned bottom, equal-height rows ---------- */
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.portfolio-list,
+.portfolio-page-list {
+    grid-auto-rows: 1fr;
+}
+
+.portfolio-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.portfolio-list .portfolio-content p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.portfolio-details-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 46px;
+    padding: 0 22px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--primary, #14d8c4);
+    color: #07111f;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.portfolio-details-btn:hover,
+.portfolio-details-btn:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(20, 216, 196, .28);
+    outline: none;
+}
+
+.portfolio-details-btn i {
+    font-size: 12px;
+}
+
+/* ---------- Page scrollbar: colours only, native thickness ---------- */
+
+html {
+    scrollbar-color: rgba(20, 216, 196, .7) transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: rgba(20, 216, 196, .7);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 216, 196, .92);
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ---------- Modal shell ---------- */
+
+html.modal-open {
+    overflow: hidden;
+}
+
+.project-modal {
+    width: min(760px, calc(100% - 24px));
+    padding: 0 0 20px;
+    margin-inline: auto;
+    margin-top: 20px;
+    border: 1px solid rgba(20, 216, 196, .22);
+    border-radius: 32px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #07111f);
+    overflow: hidden;
+    transition: opacity .28s ease, transform .28s ease;
+}
+
+@starting-style {
+    .project-modal[open] {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+.project-modal::backdrop {
+    background: rgba(7, 17, 31, .66);
+    backdrop-filter: blur(6px);
+}
+
+/* The card never scrolls: the cover stays put and only the body below it
+   scrolls, so the scrollbar starts on a straight edge instead of running into
+   the rounded top corners. */
+.project-modal-content {
+    max-height: min(88vh, 880px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-modal-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 216, 196, .6) transparent;
+}
+
+/* WebKit/Blink fallback — Chrome 121+ and Firefox use the two properties above. */
+.project-modal-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.project-modal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-modal-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(20, 216, 196, .6);
+}
+
+.project-modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 216, 196, .85);
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, .32);
+    border-radius: 50%;
+    background: rgba(7, 17, 31, .45);
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: .3s;
+}
+
+.project-modal-close:hover,
+.project-modal-close:focus-visible {
+    background: #07111f;
+    outline: none;
+}
+
+/* ---------- Modal body ---------- */
+
+.project-modal-hero {
+    flex-shrink: 0;
+    height: 220px;
+    padding: 28px;
+    background:
+        radial-gradient(circle at top right, rgba(20, 216, 196, .16), transparent 55%),
+        linear-gradient(145deg, var(--bg, #f4f8fb), var(--surface, #ffffff));
+}
+
+.project-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-modal-hero-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: var(--primary, #14d8c4);
+}
+
+.project-modal-head {
+    padding: 26px 32px 0;
+}
+
+.project-modal-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    color: var(--primary-dark, #0ea896);
+}
+
+.project-modal-title {
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--text, #07111f);
+}
+
+.project-modal-en {
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--text-muted, #94a3b8);
+}
+
+.project-modal-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 22px 32px 0;
+}
+
+.project-stat {
+    flex: 1 1 150px;
+    padding: 14px 18px;
+    border: 1px solid rgba(20, 216, 196, .18);
+    border-radius: 18px;
+    background: rgba(20, 216, 196, .06);
+}
+
+.project-stat-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: var(--text-muted, #64748b);
+}
+
+.project-stat-value {
+    font-size: 16px;
+    color: var(--text, #07111f);
+}
+
+.project-progress {
+    height: 6px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, .24);
+    overflow: hidden;
+}
+
+.project-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary, #14d8c4);
+}
+
+.project-modal-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+    margin: 24px 32px 0;
+    border-top: 1px solid rgba(148, 163, 184, .2);
+}
+
+.project-meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(148, 163, 184, .16);
+    font-size: 14px;
+}
+
+.project-meta-row dt {
+    flex-shrink: 0;
+    color: var(--text-muted, #64748b);
+}
+
+.project-meta-row dd {
+    color: var(--text, #07111f);
+    font-weight: 700;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+.project-modal-desc {
+    padding: 24px 32px 0;
+}
+
+.project-modal-desc h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text, #07111f);
+}
+
+.project-modal-desc p {
+    color: var(--text-light, #475569);
+    font-size: 15px;
+    line-height: 2.1;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.project-modal-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 26px 32px 12px;
+}
+
+.project-modal-cta .primary-btn,
+.project-modal-cta .secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.project-modal-cta .secondary-btn {
+    border: 1px solid rgba(148, 163, 184, .34);
+}
+
+/* ---------- Modal: small screens ---------- */
+
+@media (max-width: 640px) {
+    .project-modal {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        margin-block-start: auto;
+        padding-bottom: 0;
+        border-inline: 0;
+        border-bottom: 0;
+        border-radius: 28px 28px 0 0;
+    }
+
+    .project-modal-content {
+        max-height: calc(100vh - 48px);
+    }
+
+    .project-modal-cta {
+        padding-bottom: calc(32px + env(safe-area-inset-bottom));
+    }
+
+    .project-modal-hero {
+        height: 170px;
+        padding: 20px;
+    }
+
+    .project-modal-head,
+    .project-modal-desc,
+    .project-modal-cta,
+    .project-modal-stats {
+        padding-inline: 20px;
+    }
+
+    .project-modal-meta {
+        margin-inline: 20px;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-modal-title {
+        font-size: 22px;
+    }
+
+    .project-modal-cta .primary-btn,
+    .project-modal-cta .secondary-btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-modal,
+    .portfolio-details-btn,
+    .project-modal-close {
+        transition: none;
+    }
+}
+
+/* Detail page cover: same 3:2 frame as the cards */
+.single-news-cover {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.single-news-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* News slider cards: same 3:2 frame as the grid cards */
+.newsSwiper .news-image {
+    height: auto;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.newsSwiper .news-image .card-cover-image,
+.newsSwiper .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ---------- News card CTA («ادامه خبر») ---------- */
+
+.newsSwiper .news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.newsSwiper .news-content {
+    flex: 1 1 auto;
+}
+
+.news-card-button {
+    margin-top: auto;
+    padding: 0 16px 16px;
+}
+
+.news-card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 16px;
+    background: var(--primary, #14d8c4);
+    color: #07111f;
+    font-size: 14px;
+    font-weight: 900;
+    transition: .35s;
+}
+
+.news-card-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(20, 216, 196, .2);
+}
+
+/* ==========================================================
+   NEWS CARDS — 3:2 IMAGE BOXES (1500×1000), NO DISTORTION
+   ========================================================== */
+
+.news-list .news-image,
+.news-page-image {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-list .news-image img,
+.news-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
