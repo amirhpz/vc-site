@@ -91,7 +91,6 @@
         </div>
     </div>
 
-    {{-- Cloned into #project-modal by portfolio-modal.js; inert until then. --}}
     <template class="project-modal-tpl">
         <div class="project-modal-hero">
             @if ($hasCover)

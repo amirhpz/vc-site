@@ -105,12 +105,10 @@
                 <span class="tool-label">FA</span>
             </a>
 
-            <a
-                href="{{ route('language.switch', 'en') }}"
+            <a href="{{ route('language.switch', 'en') }}"
                 class="site-tool-btn {{ $locale === 'en' ? 'active' : '' }}"
                 title="English"
-                aria-label="English"
-            >
+                aria-label="English">
                 <img src="{{ asset('site/assets/images/flags/en.svg') }}" alt="EN" class="tool-flag-img">
                 <span class="tool-label">EN</span>
             </a>

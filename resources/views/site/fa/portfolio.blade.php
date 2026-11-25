@@ -15,9 +15,7 @@
             </p>
         </div>
     </section>
-
     <section class="portfolio-page-section">
-
         @php
             $projectCount = $projects->count();
 

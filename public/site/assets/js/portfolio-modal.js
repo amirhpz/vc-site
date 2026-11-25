@@ -3,8 +3,7 @@
 
     var dialog = document.getElementById('project-modal');
 
-    // <dialog>.showModal() is required; older browsers simply keep the cards as-is.
-    if (!dialog || typeof dialog.showModal !== 'function') {
+     if (!dialog || typeof dialog.showModal !== 'function') {
         return;
     }
 

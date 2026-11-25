@@ -61,7 +61,7 @@
 {{--                        <span>VENTURE CAPITAL</span>--}}
 {{--                        <h2>Artificial Intelligence, Digital Economy, and Industrial Intelligence</h2>--}}
 {{--                        <p>Cybersecurity and data protection, industrial automation and intelligence, digital economy and data analytics, cloud computing and digital infrastructure, artificial intelligence and machine learning</p>--}}
-{{--                    </div>--}}
+{{--    </div>--}}
                 </div>
             </div>
             <div class="swiper-pagination"></div>

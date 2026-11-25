@@ -84,7 +84,6 @@
     </style>
 @endsection
 @section('content')
-
     <section class="hero fa-home-hero">
         <div class="hero-layout">
             <div class="hero-slider-wrapper">

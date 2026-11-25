@@ -2,9 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================================
-       Hero Slider
-       ========================================= */
+
 
     if (document.querySelector(".heroSwiper")) {
 

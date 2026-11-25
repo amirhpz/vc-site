@@ -42,7 +42,6 @@
                     ])
                 @endforeach
             </div>
-
             @if($projects->hasPages())
                 <div class="site-pagination">
                     @if($projects->onFirstPage())
