@@ -3,143 +3,135 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =========================================
-     Hero Slider
-     ========================================= */
+       Hero Slider
+       ========================================= */
 
     if (document.querySelector(".heroSwiper")) {
 
         new Swiper(".heroSwiper", {
             loop: true,
             speed: 1000,
-
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-            },
+            spaceBetween: 0,
+            grabCursor: false,
+            allowTouchMove: true,
+            simulateTouch: true,
 
             pagination: {
                 el: ".heroSwiper .swiper-pagination",
                 clickable: true
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
             }
         });
 
     }
 
     /* =========================================
-     Portfolio Slider
-     ========================================= */
+       Portfolio Slider
+       Slide width comes from CSS (.portfolioSwiper .swiper-slide = 360px),
+       so slidesPerView must stay "auto" for the marquee to line up.
+       ========================================= */
 
     if (document.querySelector(".portfolioSwiper")) {
 
         new Swiper(".portfolioSwiper", {
-
             loop: true,
-
             speed: 3000,
-
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-            },
+            spaceBetween: 30,
 
             freeMode: true,
             freeModeMomentum: false,
 
             grabCursor: true,
-
             slidesPerView: "auto",
 
-            spaceBetween: 30
-
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            }
         });
 
     }
 
     /* =========================================
-     News Slider
-     ========================================= */
+       News Slider
+       Slide width comes from CSS (.newsSwiper .swiper-slide = 420px).
+       ========================================= */
 
     if (document.querySelector(".newsSwiper")) {
 
         new Swiper(".newsSwiper", {
-
             loop: true,
-
             speed: 8000,
+            spaceBetween: 30,
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            grabCursor: true,
+            slidesPerView: "auto",
 
             autoplay: {
                 delay: 1,
                 reverseDirection: true,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true
-            },
-
-            freeMode: true,
-            freeModeMomentum: false,
-
-            grabCursor: true,
-
-            slidesPerView: "auto",
-
-            spaceBetween: 30
-
+            }
         });
 
     }
 
     /* =========================================
-     Partners Slider
-     ========================================= */
+       Partners Slider
+       Slide width comes from CSS (.partnersSwiper .swiper-slide = 280px).
+       ========================================= */
 
     if (document.querySelector(".partnersSwiper")) {
 
         new Swiper(".partnersSwiper", {
-
             loop: true,
-
             speed: 9000,
+            spaceBetween: 25,
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            grabCursor: true,
+            slidesPerView: "auto",
 
             autoplay: {
                 delay: 1,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true
-            },
-
-            freeMode: true,
-            freeModeMomentum: false,
-
-            grabCursor: true,
-
-            slidesPerView: "auto",
-
-            spaceBetween: 25
-
+            }
         });
 
     }
 
     /* =========================================
-     Counter Animation
-     ========================================= */
+       Counter Animation
+       ========================================= */
 
     const counters = document.querySelectorAll(".counter");
 
     if (counters.length) {
 
-        const observer = new IntersectionObserver((entries) => {
+        const counterObserver = new IntersectionObserver(entries => {
 
             entries.forEach(entry => {
 
                 if (!entry.isIntersecting) return;
 
                 const counter = entry.target;
-                const target = parseInt(counter.dataset.target);
+                const target = parseInt(counter.dataset.target, 10);
 
                 let current = 0;
 
-                const animate = () => {
+                const updateCounter = () => {
 
                     const increment = target / 80;
 
@@ -147,102 +139,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (current < target) {
 
-                        counter.textContent = Math.floor(current);
-
-                        requestAnimationFrame(animate);
+                        counter.innerText = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
 
                     } else {
 
-                        counter.textContent = target.toLocaleString();
+                        counter.innerText = target;
 
                     }
 
                 };
 
-                animate();
+                updateCounter();
 
-                observer.unobserve(counter);
+                counterObserver.unobserve(counter);
 
             });
 
         }, {
-            threshold: 0.4
+            threshold: .5
         });
 
-        counters.forEach(counter => observer.observe(counter));
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
 
     }
 
     /* =========================================
-     Mobile Menu
-     ========================================= */
+       Mobile Menu
+       ========================================= */
 
     const mobileToggle = document.querySelector(".mobile-toggle");
     const navLinks = document.querySelectorAll(".nav-links");
 
-    if (mobileToggle && navLinks.length) {
+    if (mobileToggle) {
 
-        mobileToggle.addEventListener("click", (e) => {
-            e.stopPropagation();
+        mobileToggle.addEventListener("click", () => {
 
-            navLinks.forEach((nav) => {
-                nav.classList.toggle("active");
+            navLinks.forEach(menu => {
+                menu.classList.toggle("active");
             });
-
-            mobileToggle.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-            const clickedInsideMenu = Array.from(navLinks).some((nav) => nav.contains(e.target));
-            const clickedToggle = mobileToggle.contains(e.target);
-
-            if (!clickedInsideMenu && !clickedToggle) {
-                navLinks.forEach((nav) => {
-                    nav.classList.remove("active");
-                });
-
-                mobileToggle.classList.remove("active");
-            }
-        });
-
-        navLinks.forEach((nav) => {
-            nav.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", () => {
-                    navLinks.forEach((item) => {
-                        item.classList.remove("active");
-                    });
-
-                    mobileToggle.classList.remove("active");
-                });
-            });
-        });
-
-    }
-
-    /* =========================================
-     Dark Mode
-     ========================================= */
-
-    const darkToggle = document.querySelector("#darkModeToggle");
-
-    if (darkToggle) {
-
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark");
-        }
-
-        darkToggle.addEventListener("click", () => {
-
-            document.body.classList.toggle("dark");
-
-            localStorage.setItem(
-                "theme",
-                document.body.classList.contains("dark")
-                    ? "dark"
-                    : "light"
-            );
 
         });
 

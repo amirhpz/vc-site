@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('site/assets/css/swiper-bundle.min.css') }}"/>
 
 
-    <link rel="stylesheet" href="{{ asset('site/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('site/assets/css/style.css') }}?v=12">
     <link rel="stylesheet" href="{{ asset('site/assets/css/all.min.css') }}"/>
 </head>
 
@@ -253,7 +253,17 @@
 </footer>
 
 <script src="{{ asset('site/assets/js/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('site/assets/js/main.js') }}"></script>
+<script src="{{ asset('site/assets/js/main.js') }}?v=2"></script>
+
+<dialog id="project-modal" class="project-modal" aria-labelledby="project-modal-title">
+    <button type="button" class="project-modal-close" data-modal-close aria-label="بستن پنجره">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="project-modal-content" data-modal-content></div>
+</dialog>
+
+<script src="{{ asset('site/assets/js/portfolio-modal.js') }}"></script>
 
 </body>
 </html>
